@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">App_Taller_Manilla</string>
+    <string name="manilla">Manillas</string>
+    <string name="material">Material</string>
+    <string name="dije">Dije</string>
+    <string name="tipo">Tipo</string>
+    <string name="valormercado">Valor del mercado</string>
+    <string name="valor">Valor_Mercado</string>
+    <string name="valor_mercado">Valor del mercado</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="tipo_pago">Tipo de pago</string>
+    <string name="valor_pago">Valor a pagar</string>
 </resources>
