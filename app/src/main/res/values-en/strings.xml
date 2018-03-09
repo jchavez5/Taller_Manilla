@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App_Taller_Manilla</string>
+    <string name="manilla">Bracelets</string>
+    <string name="material">Material</string>
+    <string name="dije">Pendant</string>
+    <string name="tipo">Type</string>
+    <string name="valormercado">Market value</string>
+    <string name="cantidad">Quantity</string>
+    <string name="tipo_pago">Payment type</string>
+    <string name="valor_pago">Amount to be paid</string>
+</resources>

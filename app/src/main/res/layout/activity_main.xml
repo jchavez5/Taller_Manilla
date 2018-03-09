@@ -99,7 +99,7 @@
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/valor_mercado"
+            android:text="@string/valormercado"
             android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold" />
