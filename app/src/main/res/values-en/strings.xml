@@ -9,4 +9,17 @@
     <string name="cantidad">Quantity</string>
     <string name="tipo_pago">Way to pay</string>
     <string name="valor_pago">Amount to be paid</string>
+    <string name="botton">total to pay</string>
+    <string name="cuero">leather</string>
+    <string name="ancla">anchor</string>
+    <string name="martillo">hammer</string>
+    <string name="oro">gold</string>
+    <string name="plata">silver</string>
+    <string name="niquel">nickel</string>
+    <string name="usa">USA</string>
+    <string name="col">COL</string>
+    <string name="cantidad_mayor">you must enter a quantity</string>
+    <string name="error_mayor">the quantity must be greater than cero</string>
+    <string name="cuerda">rope</string>
+    <string name="oro_rosado">pink gold</string>
 </resources>

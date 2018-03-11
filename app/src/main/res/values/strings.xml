@@ -8,4 +8,42 @@
     <string name="cantidad">Cantidad</string>
     <string name="tipo_pago">Forma de pago</string>
     <string name="valor_pago">Valor a pagar</string>
+    <string name="botton">Total a pagar</string>
+    <string name="cuero">Cuero</string>
+    <string name="ancla">Ancla</string>
+    <string name="martillo">Martillo</string>
+    <string name="oro">Oro</string>
+    <string name="plata">Plata</string>
+    <string name="niquel">Niquel</string>
+    <string name="usa">USA</string>
+    <string name="col">COL</string>
+    <string name="cantidad_mayor">Debe digitar una cantidad</string>
+    <string name="error_mayor">La cantidad debe ser mayor que 0</string>
+    <string name="cuerda">Cuerda</string>
+    <string name="oro_rosado">Oro rosado</string>
+
+    <string-array name="Lista_materiales">
+        <item>@string/cuero</item>
+        <item>@string/cuerda</item>
+    </string-array>
+
+    <string-array name="Lista_dije">
+        <item>@string/martillo</item>
+        <item>@string/ancla</item>
+    </string-array>
+
+    <string-array name="Lista_tipo">
+        <item>@string/oro</item>
+        <item>@string/plata</item>
+        <item>@string/niquel</item>
+        <item>@string/oro_rosado</item>
+
+    </string-array>
+
+    <string-array name="Lista_moneda">
+        <item>@string/usa</item>
+        <item>@string/col</item>
+    </string-array>
+
+
 </resources>
