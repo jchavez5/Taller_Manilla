@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         tipos_spinner=findViewById(R.id.id_tipo);
         tipospago_spinner=findViewById(R.id.id_tipopago);
 
+/*crear las lista en los spinner*/
         materiales=recursos.getStringArray(R.array.Lista_materiales);
         ArrayAdapter<String> adapter= new ArrayAdapter(this,android.R.layout.simple_spinner_item,materiales);
         materiales_spinner.setAdapter(adapter);
@@ -54,16 +55,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void calculo(View v){
-        double  cant ,precio=0;
+        double  cant ,precio=0;/*variables de uso*/
         int opciones_material,opciones_dije,opciones_tipo,opciones_moneda;
-        resultado.setText("");
+        resultado.setText("");/*setear la caja*/
 
-        cant=Double.parseDouble(cantidad.getText().toString());
+        cant=Double.parseDouble(cantidad.getText().toString());/*obtiene la cantidad*/
 
-        opciones_material  = materiales_spinner.getSelectedItemPosition();/*el spinner material*/
-        opciones_dije=dijes_spinner.getSelectedItemPosition();/*el spinner dije*/
-        opciones_tipo=tipos_spinner.getSelectedItemPosition();/*el spinner tipo*/
-        opciones_moneda=tipospago_spinner.getSelectedItemPosition();/*el spinner moneda*/
+        opciones_material  = materiales_spinner.getSelectedItemPosition();/*el spinner material en su posicion*/
+        opciones_dije=dijes_spinner.getSelectedItemPosition();/*el spinner dije en su posicion*/
+        opciones_tipo=tipos_spinner.getSelectedItemPosition();/*el spinner tipo en su posicion*/
+        opciones_moneda=tipospago_spinner.getSelectedItemPosition();/*el spinner moneda en su posicion*/
 
 
         switch (opciones_material){
@@ -74,10 +75,71 @@ public class MainActivity extends AppCompatActivity {
                             case 0:/*oro*/
                                 precio=Metodos.total_colombia(cant ,100,opciones_moneda);
                                 break;
+                            case 1:/*plata*/
+                                precio=Metodos.total_colombia(cant,80   ,opciones_moneda);
+                                break;
+                            case 2:/*niquel*/
+                                precio=Metodos.total_colombia(cant,70   ,opciones_moneda);
+                                break;
+                            case 3:/*oro rosado*/
+                                precio=Metodos.total_colombia(cant ,100,opciones_moneda);
+                                break;
+                        }
+                        break;
+                    case 1:/*ancla  */
+                        switch (opciones_tipo){
+                            case 0:/*oro*/
+                                precio=Metodos.total_colombia(cant ,120,opciones_moneda);
+                                break;
+                            case 1:/*plata*/
+                                precio=Metodos.total_colombia(cant,100   ,opciones_moneda);
+                                break;
+                            case 2:/*niquel*/
+                                precio=Metodos.total_colombia(cant,90   ,opciones_moneda);
+                                break;
+                            case 3:/*oro rosado*/
+                                precio=Metodos.total_colombia(cant ,120,opciones_moneda);
+                                break;
+                        }
+                    break;
+                }
+
+                break;
+            case 1:/*cuerda*/
+                switch (opciones_dije){
+                    case 0:/*martillo*/
+                        switch (opciones_tipo){
+                            case 0:/*oro*/
+                                precio=Metodos.total_colombia(cant ,90,opciones_moneda);
+                                break;
+                            case 1:/*plata*/
+                                precio=Metodos.total_colombia(cant,70,opciones_moneda);
+                                break;
+                            case 2:/*niquel*/
+                                precio=Metodos.total_colombia(cant,50   ,opciones_moneda);
+                                break;
+                            case 3:/*oro rosado*/
+                                precio=Metodos.total_colombia(cant ,90,opciones_moneda);
+                                break;
+                        }
+                        break;
+                    case 1:/*ancla  */
+                        switch (opciones_tipo){
+                            case 0:/*oro*/
+                                precio=Metodos.total_colombia(cant ,110,opciones_moneda);
+                                break;
+                            case 1:/*plata*/
+                                precio=Metodos.total_colombia(cant,90   ,opciones_moneda);
+                                break;
+                            case 2:/*niquel*/
+                                precio=Metodos.total_colombia(cant,80   ,opciones_moneda);
+                                break;
+                            case 3:/*oro rosado*/
+                                precio=Metodos.total_colombia(cant ,110,opciones_moneda);
+                                break;
                         }
                         break;
                 }
-
                 break;
         }
         resultado.setText(""+String.format("%.2f",precio));
