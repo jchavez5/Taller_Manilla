@@ -3,6 +3,7 @@ package com.jose.app_taller_manilla;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -51,6 +52,39 @@ public class MainActivity extends AppCompatActivity {
 
         boton=findViewById(R.id.id_boton);
 
+    }
+    public void calculo(View v){
+        double  cant ,precio=0;
+        int opciones_material,opciones_dije,opciones_tipo,opciones_moneda;
+        resultado.setText("");
+
+        cant=Double.parseDouble(cantidad.getText().toString());
+
+        opciones_material  = materiales_spinner.getSelectedItemPosition();/*el spinner material*/
+        opciones_dije=dijes_spinner.getSelectedItemPosition();/*el spinner dije*/
+        opciones_tipo=tipos_spinner.getSelectedItemPosition();/*el spinner tipo*/
+        opciones_moneda=tipospago_spinner.getSelectedItemPosition();/*el spinner moneda*/
+
+
+        switch (opciones_material){
+            case 0:/*cuero*/
+                switch (opciones_dije){
+                    case 0:/*martillo*/
+                        switch (opciones_tipo){
+                            case 0:/*oro*/
+                                precio=Metodos.total_colombia(cant ,100,opciones_moneda);
+                                break;
+                        }
+                        break;
+                }
+
+                break;
+        }
+        resultado.setText(""+String.format("%.2f",precio));
+
 
     }
+
+
+
 }

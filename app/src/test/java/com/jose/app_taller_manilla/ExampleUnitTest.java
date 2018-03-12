@@ -11,7 +11,9 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
     @Test
-    public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+  public void total_cuero_martillo_oro_dolares(){
+        double  cantidad=2,precio=100,tipomoneda=1;
+        double resultado=Metodos.total_colombia(cantidad,precio,tipomoneda);
+        assertEquals(640000,resultado,0 );
     }
 }
