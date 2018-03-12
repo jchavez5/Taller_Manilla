@@ -18,8 +18,8 @@
     <string name="niquel">nickel</string>
     <string name="usa">USA</string>
     <string name="col">COL</string>
-    <string name="cantidad_mayor">you must enter a quantity</string>
-    <string name="error_mayor">the quantity must be greater than cero</string>
+    <string name="cantidad_valor">" it can not be empty, it must type a quantity"</string>
+    <string name="error_mayor">the quantity must be less tha cero</string>
     <string name="cuerda">rope</string>
     <string name="oro_rosado">pink gold</string>
 </resources>
