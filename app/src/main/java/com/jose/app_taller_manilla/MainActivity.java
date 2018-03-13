@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText cantidad;
@@ -53,22 +56,24 @@ public class MainActivity extends AppCompatActivity {
 
         boton = findViewById(R.id.id_boton);
 
+
     }
 
     public void calculo(View v) {
         double cant;/*variables de uso*/
         int opciones_material, opciones_dije, opciones_tipo, opciones_moneda;
         resultado.setText("");/*setear la caja*/
+        NumberFormat nf =NumberFormat.getCurrencyInstance(Locale.getDefault());
 
-        cant = Double.parseDouble(cantidad.getText().toString());/*obtiene la cantidad*/
-
-        opciones_material = materiales_spinner.getSelectedItemPosition();/*el spinner material en su posicion*/
-        opciones_dije = dijes_spinner.getSelectedItemPosition();/*el spinner dije en su posicion*/
-        opciones_tipo = tipos_spinner.getSelectedItemPosition();/*el spinner tipo en su posicion*/
-        opciones_moneda = tipospago_spinner.getSelectedItemPosition();/*el spinner moneda en su posicion*/
         if (validar()){
+            cant = Double.parseDouble(cantidad.getText().toString());/*obtiene la cantidad*/
+
+            opciones_material = materiales_spinner.getSelectedItemPosition();/*el spinner material en su posicion*/
+            opciones_dije = dijes_spinner.getSelectedItemPosition();/*el spinner dije en su posicion*/
+            opciones_tipo = tipos_spinner.getSelectedItemPosition();/*el spinner tipo en su posicion*/
+            opciones_moneda = tipospago_spinner.getSelectedItemPosition();/*el spinner moneda en su posicion*/
             double operacion = Metodos.calculo_Spinner(cant, opciones_material, opciones_dije, opciones_tipo, opciones_moneda);
-            resultado.setText("" + String.format("%.2f", operacion));
+            resultado.setText( nf.format(operacion));
         }
     }
 

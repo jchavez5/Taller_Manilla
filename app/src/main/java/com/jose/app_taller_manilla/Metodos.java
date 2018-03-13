@@ -11,7 +11,6 @@ public class Metodos {
         }
         return cantidad*(valor_Moneda);
     }
-
     public static double calculo_Spinner(double cant , int opciones_material, int opciones_dije, int opciones_tipo,int opciones_moneda) {
         double precio =0;
             switch (opciones_material) {

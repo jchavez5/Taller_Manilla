@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">handle sale app</string>
+    <string name="app_name"> Bracelet sale app</string>
     <string name="manilla">order your handle</string>
     <string name="material">Material</string>
     <string name="dije">Pendant</string>
@@ -18,7 +18,7 @@
     <string name="niquel">nickel</string>
     <string name="usa">USA</string>
     <string name="col">COL</string>
-    <string name="cantidad_valor">" it can not be empty, it must type a quantity"</string>
+    <string name="cantidad_valor">" it can not be empty, you must type a quantity"</string>
     <string name="error_mayor">the quantity must be less tha cero</string>
     <string name="cuerda">rope</string>
     <string name="oro_rosado">pink gold</string>

@@ -17,7 +17,7 @@
     <string name="niquel">Niquel</string>
     <string name="usa">USA</string>
     <string name="col">COL</string>
-    <string name="cantidad_valor">No puede estar vacío debe digitar una cantidad</string>
+    <string name="cantidad_valor">No puede estar vacío, debe digitar una cantidad</string>
     <string name="error_mayor">La cantidad debe ser menor que 0</string>
     <string name="cuerda">Cuerda</string>
     <string name="oro_rosado">Oro rosado</string>
